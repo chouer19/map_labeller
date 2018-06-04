@@ -1,0 +1,92 @@
+doctype html
+html
+    head
+        title Trunk HDMap
+        include ./script.jade    
+        include ./css.jade
+    body
+        // this is map container
+        div#container
+            canvas#box
+
+        //tool，show trunk
+        div#head
+            h1 Welcom to Trunk HDMap
+
+        //upload img
+        div#upLoad
+            include ./uploadButton.html
+
+        div#lane
+            车道数目： &nbsp
+            //input(type='number',id='laneNum',value='1',step='1',min='1',max='8',onchange = 'updateNum()')
+            select#laneNum
+                option(value = 1) 1
+                option(value = 2) 2
+                option(value = 3) 3
+                option(value = 4) 4
+                option(value = 5) 5
+                option(value = 6) 6
+                option(value = 7) 7
+                option(value = 8) 8
+                option(value = 9) 9
+            span &nbsp 条
+            br
+            车道宽度： &nbsp
+            //input(type='number',id='laneWidth',value='3',step='0.1',min='3',max='5',onchange = 'updateWidth()')
+            select#laneWidth
+                option(value = 2.5) 2.5
+                option(value = 2.7) 2.7
+                option(value = 3.0) 3.0
+                option(value = 3.2) 3.2
+                option(value = 3.4) 3.4
+                option(value = 3.6) 3.6
+                option(value = 3.8) 3.8
+                option(value = 4.0) 4.0
+                option(value = 4.2) 4.2
+                option(value = 4.4) 4.4
+                option(value = 4.6) 4.6
+                option(value = 4.8) 4.8
+                option(value = 5.0) 5.0
+            span &nbsp 米
+            br
+            图像层级： &nbsp
+            //input(type='number',id='zoom',value='1',step='1',min='1',max='4',onchange = 'updateZoom()')
+            select#zoom
+                option(value = 1) 1
+                option(value = 2) 2
+                option(value = 3) 3
+                option(value = 4) 4
+            span &nbsp 层
+
+        div#laneNew
+            第： &nbsp
+            input(type='number',id='newNum',value='1',step='1',min='1',max='8')
+            span &nbsp 条
+            br
+            宽： &nbsp
+            input(type='number',id='newWidth',value='3',step='0.1',min='3',max='5')
+            span &nbsp 米
+        div#laneAdd
+            input(type='button',id = 'newLane',value='Add',onclick='newLane()')
+            &nbsp
+            &nbsp
+            &nbsp
+            input(type='button',id = 'addLane',value='OK')
+
+        div#attribute
+            span segID: &nbsp
+            input(type = 'number', id = 'segID')
+            &nbsp &nbsp
+            span preID: &nbsp
+            input(type = 'number', id = 'preID')
+            &nbsp &nbsp
+            span nextID: &nbsp
+            input(type = 'number', id = 'nextID')
+            br
+            br
+            input(type = 'button', id = 'commit',value = 'commit',onclick='commitA()')
+
+        div#intro
+                p#introHead please read instructions now!
+                p#introContent Press and hold 'Ctrl' you can add a point to current line;Press 'Enter' when you complish one line;Alter the number or width of lane at any time you need to ajust related attribute;Commit the new segmentID and its pre or next ID;Click the path if then edit it;Press 'Space' to select next point of this path when edit it,by the contrary Press 'b' to select a back point;The white is the current Path you are editing;Press 'Delete' to delete a lane or a segment(if a refline is selected);Refline's width is bigger;Pre segment is green,next is blue,current is yellow.

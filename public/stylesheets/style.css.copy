@@ -1,0 +1,158 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    font-family: "Arial Unicode MS" ;
+}
+#container{ 
+    width: 1000px; 
+    height: 720px;
+    float:left;
+    left: 0px;
+    top : 0px;
+    right : 0px;
+    bottom : 0px;
+    position : auto;
+    overflow : hidden;
+    margin : auto;
+    background-color: #F00; 
+}
+#box{ 
+    cursor:crosshair;
+    width: 1000px; 
+    height: 1024px;
+    position : relative;
+    top: 0px;
+    left: 0px;
+    background-color: #0FC; 
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+ 
+
+h1{
+    position:absolute;
+    left:1000px;
+    width:420px;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0 0;
+    color: #8CC84C;
+}
+
+#upLoad{
+    position:absolute;
+    left:1000px;
+    top:100px;
+    width:350px;
+    height:100px;
+    text-align: center;
+    margin: 0;
+    color: #80084C;
+    font-size:25px;
+}
+
+#lane{
+    position:absolute;
+    left:1030px;
+    top:150px;
+    width:190px;
+    height:130px;
+    margin-left:100px;
+    text-align: center;
+    margin: 0;
+    color: #800ffC;
+    font-size:20px;
+}
+#laneNew{
+    position:absolute;
+    left:1230px;
+    top:150px;
+    width:190px;
+    height:130px;
+    margin-left:100px;
+    text-align: center;
+    margin: 0;
+    color: #800ffC;
+    font-size:20px;
+}
+
+#laneAdd{
+    position:absolute;
+    left:1230px;
+    top:225px;
+    width:190px;
+    height:130px;
+    margin-left:100px;
+    text-align: center;
+    margin: 0;
+    color: #800ffC;
+    font-size:20px;
+}
+#laneNum,#laneWidth,#zoom,#preID,#nextID,#segID,#newNum,#newWidth{
+    height:25px;
+    width:45px;
+    text-align:center;
+}
+
+#newLane,#addLane{
+    height:25px;
+    width:50px;
+}
+
+#commit{
+    height:25px;
+    width:100px;
+    font-size:20px;
+}
+#attribute{
+    position:absolute;
+    left:1020px;
+    top:280px;
+    width:390px;
+    height:130px;
+    margin-left:100px;
+    text-align: center;
+    margin: 0;
+    color: #800ffC;
+    font-size:20px;
+}
+
+#intro{
+    position:absolute;
+    left:1000px;
+    top:360px;
+    width:390px;
+    height:200px;
+    text-align: center;
+    margin: 0;
+    color: #8CC84C;
+}
+
+.text{
+    margin-left : 5px;
+    margin-top : 10px;
+}
+
+#toolBar{
+    text-align:center;
+    width:auto;
+    height: auto;
+    color: #0c0;
+    position: auto;
+    float:left;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #f8c;
+    float:left;
+}
+ 
+#saveImg{
+    width:55px;
+    height:27px;
+}
